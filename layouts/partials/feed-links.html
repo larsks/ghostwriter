@@ -1,0 +1,17 @@
+{{ if .OutputFormats.Get "Atom" -}}
+{{ with .OutputFormats.Get "Atom" }}
+        <link href="{{ .RelPermalink }}"
+              rel="alternate"
+              {{ printf "type=\"%s\"" .MediaType.Type | safeHTMLAttr }}
+              title="{{ $.Title }}">
+{{ end -}}
+{{ end -}}
+{{ if .OutputFormats.Get "RSS" -}}
+{{ with .OutputFormats.Get "RSS" }}
+        <link href="{{ .RelPermalink }}"
+              rel="alternate"
+              {{ printf "type=\"%s\"" .MediaType.Type | safeHTMLAttr }}
+              title="{{ $.Title }}">
+{{ end -}}
+{{ end -}}
+
