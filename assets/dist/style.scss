@@ -420,6 +420,11 @@ table {
 
     &:first-child { padding-top: 0; }
 
+    p {
+	padding-left: 20px;
+	margin: 0;
+    }
+
     a {
         -webkit-transition: all 0.2s ease-in-out;
         -moz-transition: all 0.2s ease-in-out;
