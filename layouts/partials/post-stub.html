@@ -6,4 +6,14 @@
             <span class="post-stub-tag">Featured</span>
         {{ end }}
     </a>
+
+    {{ if .Site.Params.showSummary }}
+    <p class="post-stub-summary">
+    {{ .Summary }}
+    {{ if .Site.Params.showMore }}
+    <span class="post-stub-more"><a href="{{ .Permalink }}">{{ .Site.Params.moreMarker | default "(Read more...)" }}</a></span>
+    {{ end }}
+    </p>
+    {{ end }}
 </li>
+
